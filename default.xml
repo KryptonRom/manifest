@@ -4,13 +4,13 @@
 
   <remote  name="aosp"
            fetch="https://android.googlesource.com" />
-           
+
   <remote  name="aospa"
            fetch="https://github.com/AOSPA" />
 
   <remote  name="aospal"
            fetch="https://github.com/AOSPAL" />
-           
+
   <remote  name="sm"
            fetch="https://github.com/SaberMod" />
 
@@ -25,7 +25,7 @@
 
   <remote  name="blobs"
            fetch="https://github.com/ThankYouMario" />
-           
+
   <remote name="TheMuppets"
           fetch="https://github.com/TheMuppets" />
 
@@ -46,7 +46,7 @@
   </project>
 
   <project path="abi/cpp" name="platform/abi/cpp" groups="pdk" />
-  <project path="art" name="android_art" remote="aospal" revision="kitkat" /> 
+  <project path="art" name="android_art" remote="aospal" revision="kitkat" />
   <project path="bionic" name="android_bionic" remote="aospal" revision="kitkat" />
   <project path="bootable/bootloader/legacy" name="platform/bootable/bootloader/legacy" />
   <project path="bootable/diskinstaller" name="platform/bootable/diskinstaller" />
@@ -265,7 +265,7 @@
   <project path="external/zlib" name="platform/external/zlib" groups="pdk" />
   <project path="external/zxing" name="platform/external/zxing" />
   <project path="frameworks/av" name="android_frameworks_av" remote="aospal" revision="kitkat" />
-  <project path="frameworks/base" name="android_frameworks_base" remote="aospal" revision="kitkat1" />
+  <project path="frameworks/base" name="android_frameworks_base" remote="aospal" revision="kitkat" />
   <project path="frameworks/compile/libbcc" name="platform/frameworks/compile/libbcc" groups="pdk" />
   <project path="frameworks/compile/mclinker" name="platform/frameworks/compile/mclinker" groups="pdk" />
   <project path="frameworks/compile/slang" name="android_frameworks_compile_slang" remote="aospal" revision="kitkat" />
@@ -418,7 +418,7 @@
   <project path="tools/swt" name="platform/tools/swt" groups="notdefault,tools" />
 
  <project path="vendor/pa" name="AOSPA/android_vendor_pa" remote="github" revision="kitkat" >
-    <copyfile src="build.sh" dest="rom-build.sh" />    
+    <copyfile src="build.sh" dest="rom-build.sh" />
   </project>
 
 
