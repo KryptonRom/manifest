@@ -40,6 +40,9 @@
 
   <remote  name="beergang"
            fetch="https://github.com/BeerGang" />
+           
+  <remote  name="KryptonRom"
+           fetch="https://github.com/KryptonRom" />
 
   <default revision="refs/tags/android-4.4.2_r2"
            remote="aosp"
@@ -49,7 +52,7 @@
 
   <project path="manifest" name="manifest" remote="aospal" revision="kitkat-remix" />
 
-  <project path="build" name="android_build" remote="aospal" revision="kitkat" >
+  <project path="build" name="android_build" remote="aospal" revision="kitkat-remix" >
     <copyfile src="core/root.mk" dest="Makefile" />
   </project>
 
@@ -273,14 +276,12 @@
   <project path="external/zlib" name="platform/external/zlib" groups="pdk" />
   <project path="external/zxing" name="platform/external/zxing" />
   <project path="frameworks/av" name="android_frameworks_av" remote="aospal" revision="kitkat-remix" />
-  <project path="frameworks/base" name="android_frameworks_base" remote="aospal" revision="kitkat-remix" />
   <project path="frameworks/compile/libbcc" name="platform/frameworks/compile/libbcc" groups="pdk" />
   <project path="frameworks/compile/mclinker" name="platform/frameworks/compile/mclinker" groups="pdk" />
   <project path="frameworks/compile/slang" name="android_frameworks_compile_slang" remote="aospal" revision="kitkat" />
   <project path="frameworks/ex" name="android_frameworks_ex" remote="aospal" revision="kitkat" />
   <project path="frameworks/mff" name="platform/frameworks/mff" />
   <project path="frameworks/ml" name="platform/frameworks/ml" />
-  <project path="frameworks/native" name="android_frameworks_native" remote="aospal" revision="kitkat" />
   <project path="frameworks/opt/calendar" name="platform/frameworks/opt/calendar" />
   <project path="frameworks/opt/carddav" name="platform/frameworks/opt/carddav" />
   <project path="frameworks/opt/colorpicker" name="platform/frameworks/opt/colorpicker" />
@@ -292,7 +293,6 @@
   <project path="frameworks/opt/net/voip" name="android_frameworks_opt_net_voip" remote="aospal" revision="kitkat" />
   <project path="frameworks/opt/photoviewer" name="platform/frameworks/opt/photoviewer" />
   <project path="frameworks/opt/timezonepicker" name="platform/frameworks/opt/timezonepicker" />
-  <project path="frameworks/opt/telephony" name="android_frameworks_opt_telephony" remote="aospal" revision="kitkat" />
   <project path="frameworks/opt/vcard" name="platform/frameworks/opt/vcard" />
   <project path="frameworks/rs" name="android_frameworks_rs" remote="aospal" revision="kitkat" />
   <project path="frameworks/support" name="platform/frameworks/support" />
@@ -319,14 +319,10 @@
   <project path="packages/apps/Camera2" name="platform/packages/apps/Camera2" />
   <project path="packages/apps/CellBroadcastReceiver" name="platform/packages/apps/CellBroadcastReceiver" />
   <project path="packages/apps/CertInstaller" name="platform/packages/apps/CertInstaller" />
-  <project path="packages/apps/Contacts" name="platform/packages/apps/Contacts" />
-  <project path="packages/apps/ContactsCommon" name="platform/packages/apps/ContactsCommon" />
   <project path="packages/apps/DeskClock" name="platform/packages/apps/DeskClock" />
-  <project path="packages/apps/Dialer" name="android_packages_apps_Dialer" remote="aospal" revision="kitkat-remix" />
   <project path="packages/apps/DSPManager" name="android_packages_apps_DSPManager" remote="omni" revision="android-4.4" />
   <project path="packages/apps/Email" name="platform/packages/apps/Email" />
   <project path="packages/apps/Exchange" name="platform/packages/apps/Exchange" />
-  <project path="packages/apps/Gallery2" name="platform/packages/apps/Gallery2" />
   <project path="packages/apps/HTMLViewer" name="platform/packages/apps/HTMLViewer" />
   <project path="packages/apps/InCallUI" name="android_packages_apps_InCallUI" remote="omni" revision="android-4.4" />
   <project path="packages/apps/KeyChain" name="platform/packages/apps/KeyChain" />
@@ -338,13 +334,11 @@
   <project path="packages/apps/Nfc" name="android_packages_apps_Nfc" remote="aospal" revision="kitkat" />
   <project path="packages/apps/OneTimeInitializer" name="platform/packages/apps/OneTimeInitializer" />
   <project path="packages/apps/PackageInstaller" name="platform/packages/apps/PackageInstaller" />
-  <project path="packages/apps/PerformanceControl" name="android_packages_apps_PerformanceControl" remote="omni" revision="android-4.4" />
+  <project path="packages/apps/PerformanceControl" name="android_packages_apps_PerformanceControl" remote="aospal" revision="pa_barracuda" />
   <project path="packages/apps/PhoneCommon" name="platform/packages/apps/PhoneCommon" />
   <project path="packages/apps/Protips" name="platform/packages/apps/Protips" />
   <project path="packages/apps/Provision" name="platform/packages/apps/Provision" />
   <project path="packages/apps/QuickSearchBox" name="platform/packages/apps/QuickSearchBox" />
-  <project path="packages/apps/ScreenRecorder" name="AOSPA-legacy/android_packages_apps_ScreenRecorder" remote="github" revision="kitkat" />
-  <project path="packages/apps/Settings" name="android_packages_apps_Settings" remote="aospal" revision="kitkat-remix"  />
   <project path="packages/apps/SmartCardService" name="platform/packages/apps/SmartCardService" />
   <project path="packages/apps/SoundRecorder" name="platform/packages/apps/SoundRecorder" />
   <project path="packages/apps/SpareParts" name="platform/packages/apps/SpareParts" />
@@ -411,7 +405,7 @@
   <project path="sdk" name="platform/sdk" />
   <project path="system/core" name="android_system_core" remote="aospal" revision="kitkat-remix" />
   <project path="system/extras" name="android_system_extras" remote="aospa" revision="kitkat"/>
-  <project path="system/media" name="android_system_media" remote="omni" revision="android-4.4" />
+  <project path="system/media" name="android_system_media" remote="aospal" revision="android-4.4" />
   <project path="system/netd" name="platform/system/netd" groups="pdk" />
   <project path="system/security" name="platform/system/security" groups="pdk" />
   <project path="system/vold" name="platform/system/vold" />
@@ -426,8 +420,18 @@
   <project path="tools/motodev" name="platform/tools/motodev" groups="notdefault,motodev" />
   <project path="tools/studio/cloud" name="platform/tools/studio/cloud" groups="notdefault,tools" />
   <project path="tools/swt" name="platform/tools/swt" groups="notdefault,tools" />
-
- <project path="vendor/pa" name="android_vendor_pa" remote="aospal" revision="kitkat-remix" >
+  <project path="frameworks/base" name="android_frameworks_base" remote="KryptonRom" revision="kitkat-remix" />
+  <project path="frameworks/native" name="android_frameworks_native" remote="KryptonRom" revision="master" />
+  <project path="packages/apps/Contacts" name="platform/packages/apps/Contacts" remote="KryptonRom" revision="master" />
+  <project path="packages/apps/ContactsCommon" name="platform/packages/apps/ContactsCommon" remote="KryptonRom" revision="master" />
+  <project path="packages/apps/Dialer" name="android_packages_apps_Dialer" remote="KryptonRom" revision="master" />
+  <project path="packages/apps/Gallery2" name="platform/packages/apps/Gallery2" remote="KryptonRom" revision="master" />
+  <project path="packages/apps/Settings" name="android_packages_apps_Settings" remote="KryptonRom" revision="kitkat-remix"  />
+  <project path="packages/services/Telephony" name="android_packages_services_Telephony" remote="KryptonRom" revision="master" />
+  <project path="packages/apps/OmniSwitch" name="android_packages_apps_OmniSwitch" remote="KryptonRom" revision="android-4.4" />
+  <project path="packages/apps/ScreenRecorder" name="android_packages_apps_ScreenRecorder" remote="ChameleonOS" revision="kitkat" />
+  
+  <project path="vendor/pa" name="android_vendor_pa" remote="KryptonRom" revision="master" >
     <copyfile src="build.sh" dest="rom-build.sh" />
   </project>
 
