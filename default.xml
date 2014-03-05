@@ -43,6 +43,9 @@
            
   <remote  name="KryptonRom"
            fetch="https://github.com/KryptonRom" />
+           
+  <remote  name="ChameleonOS"
+           fetch="https://github.com/ChameleonOS" />
 
   <default revision="refs/tags/android-4.4.2_r2"
            remote="aosp"
